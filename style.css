@@ -17,6 +17,8 @@ nav {
     padding-left: 8rem;
     padding-right: 8rem;
     background-color: white;
+    position: sticky;
+    top: 0px;
 }
 
 .nav-mobile {
