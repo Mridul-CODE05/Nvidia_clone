@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: rgb(231, 228, 228);
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    background-color: white;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+@media (max-width: 1150px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .left .navbtn,
+    nav .left img,
+    nav .right .navbtn,
+    nav .right img {
+        display: none;
+    }
+
+    .nav-mobile {
+        width: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+}
+
+.navbtn {
+    transition: font-weight 0.2s ease-in;
+}
+
+.navbtn:hover {
+    font-weight: 900;
+    cursor: pointer;
+}
+
+nav .left,
+nav .right,
+nav .right .btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .right {
+    gap: 3rem;
+}
+
+nav .right .icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .right .icons #search {
+    transition: height 0.5s ease-in-out;
+}
+
+nav .right .icons #search:hover {
+    height: 35px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(7, 172, 7);
+    font-weight: 600;
+}
+
+.shopcards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.shopcards .card .text {
+    max-width: 30vh;
+    max-height: 30vh;
+    padding: 1rem;
+}
+
+.shopcards .card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: box-shadow 0.2s ease-in;
+
+}
+
+.shopcards .card:hover {
+    box-shadow: 0 -0.5em 1em rgb(17, 144, 17),
+        0 0 0 2px white,
+        0.3em 0.3em 1em rgb(2, 109, 2);
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    margin-top: auto;
+    transition: font-weight 0.2s ease-in-out;
+}
+
+.footbtn:hover {
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.cookies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(69, 68, 68);
+    color: white;
+    position: sticky;
+    bottom: 0px;
+}
+.cookies .text{
+    text-align: center;
+}
+
+@media (max-width: 1150px) {
+    .cookies {
+        flex-direction: column;
+    }
+
+    .cookies button {
+        width: 100%;
+    }
+}
+
+.cookies button {
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border: 1px transparent;
+    background-color: rgb(7, 172, 7);
+    ;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cookies button:hover {
+    background-color: rgb(7, 92, 7);
+    ;
+    color: rgb(212, 209, 209);
+    cursor: pointer;
+}
